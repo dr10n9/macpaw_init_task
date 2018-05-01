@@ -1,4 +1,4 @@
-#!/bin/bash
+#this code finds 3 parts of password  
 quantity=$(cat codes | wc -l)
 for((i=1;i<=quantity;i++))
 do
