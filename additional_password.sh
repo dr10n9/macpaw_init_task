@@ -1,3 +1,4 @@
+
 #this code finds 3 parts of password  
 quantity=$(cat /app/codes | wc -l)
 for((i=1;i<=quantity;i++))
