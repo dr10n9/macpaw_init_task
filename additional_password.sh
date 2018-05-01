@@ -1,5 +1,5 @@
 #this code finds 3 parts of password  
-quantity=$(cat codes | wc -l)
+quantity=$(cat /app/codes | wc -l)
 for((i=1;i<=quantity;i++))
 do
 	arr[i]=$(head -$i codes | tail -1)
@@ -18,4 +18,4 @@ part1=$max
 part2=$(cat /var/log/nginx/old.log | grep '=8.8.8.8' | wc -l)
 part3=$(curl -I hint.macpaw.io | grep 'ETag');part3=$(echo ${part3:7:2})
 pass=$(($part1+$part2+$part3))
-echo $pass > pass
+echo $pass > /app/pass
