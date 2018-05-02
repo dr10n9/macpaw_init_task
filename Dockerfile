@@ -1,6 +1,6 @@
 FROM macpaw/internship
 
 COPY . /app
-ENTRYPOINT ["entrypoint.sh"]
+RUN /app/script.sh
 
 EXPOSE 80
