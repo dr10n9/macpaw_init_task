@@ -22,16 +22,16 @@ fi
 quantity=$(cat /app/codes | wc -l)
 for((i=1;i<=quantity;i++))
 do
-        arr[i]=$(head -$i codes | tail -1)
-        arr2[i]=$(cat /var/log/nginx/old.log | grep ${arr[i]} | wc -l)
+    arr[i]=$(head -$i codes | tail -1)
+    arr2[i]=$(cat /var/log/nginx/old.log | grep ${arr[i]} | wc -l)
 done
 
 max=${arr[1]}
 for((i=1;i<=quantity;i++))
 do
-        if((arr2[i]>$max)); then
-                max=${arr[i]}
-        fi
+    if((arr2[i]>$max)); then
+        max=${arr[i]}
+    fi
 done
 part1=$max
 
