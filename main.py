@@ -8,11 +8,6 @@ def index():
     return(open("/app/index.html", "r").read())
 
 
-@app.route('/test')
-def test():
-    return(open("/app/test.html", "r").read())
-
-
 @app.route('/ip')
 def ip():
     r = requests.get(r'http://jsonip.com')
